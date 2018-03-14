@@ -23,7 +23,7 @@
 	```
 	<%
     response.setHeader("Cache-Control", "no-cache");
-//在内存中创建图像
+    //在内存中创建图像
     int width = 60, height = 20;
     BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     Graphics g = image.getGraphics();
@@ -44,20 +44,20 @@
     ImageIO.write(image,"JPEG",response.getOutputStream());
     out.clear();
     out=pageContext.pushBody();
-%>
+    %>
 	```
 2. 提交表单
 
-	![这里写图片描述](//img-blog.csdn.net/20180314162939133?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L2x1Y2t5OTMyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+	![](http://img-blog.csdn.net/20180314162939133?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L2x1Y2t5OTMyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 3. 提交之后对验证码进行验证
 	
 	```
 	/**
- * Project: ValidateCode
- * Created by Zdd on 2018/3/13.
- */
-public class ValidateServlet extends HttpServlet {
+    * Project: ValidateCode
+    * Created by Zdd on 2018/3/13.
+    */
+    public class ValidateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
@@ -77,4 +77,4 @@ public class ValidateServlet extends HttpServlet {
 ----
 
 
-![这里写图片描述](//img-blog.csdn.net/20180314163157756?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L2x1Y2t5OTMyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](http://img-blog.csdn.net/20180314163157756?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L2x1Y2t5OTMyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
